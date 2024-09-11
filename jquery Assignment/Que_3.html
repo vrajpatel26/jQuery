@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .container {
+        height: 400px;
+        width: 700px;
+        background-color: rgb(78, 75, 72);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .input-text {
+        height: 30px;
+        width: 230px;
+    }
+
+    button {
+        height: 35px;
+        width: 60px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="pass-box">
+            <input type="text" placeholder="password" class="input-text">
+            <button> Hide</button>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            let passwordArea = $('.input-text');
+            let type = passwordArea.attr('type') === 'password' ? 'text' : 'password';
+            passwordArea.attr('type', type);
+
+            $(this).text(type === 'input-text' ? 'Show' : 'Hide');
+        });
+    });
+</script>
+
+</html>

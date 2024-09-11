@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(51, 46, 46);
+       
+    }
+
+    .slider-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slide {
+        height: 80px;
+        width: 1300px;
+        background-color: yellow;
+        margin-top: 50px;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 600;
+        padding-top: 20px;
+    }
+
+    .sliding {
+        height: 300px;
+        width: 1300px;
+        background-color: yellowgreen;
+        display: none;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 600;
+        padding-top: 70px;
+    }
+
+    .bt-group{
+        display: flex;
+        justify-content: center;
+        margin-top: 100px ;
+        gap: 50px;
+    }
+
+    .bt1{
+        height: 50px;
+        width: 150px;
+        font-size: 15px;
+        border-radius: 30px;
+    }
+
+    .bt1:hover {
+        background-color: yellow;
+        font-size: 17px;
+    }
+
+    .bt2{
+        height: 50px;
+        width: 150px;
+        font-size: 15px;
+        border-radius: 30px;
+    }
+
+    .bt2:hover {
+        background-color: yellow;
+        font-size: 17px;
+    }
+
+    .bt3{
+        height: 50px;
+        width: 150px;
+        font-size: 15px;
+        border-radius: 30px;
+    }
+
+    .bt3:hover {
+        background-color: yellow;
+        font-size: 17px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="slider-container">
+            <div class="slide">SlideUp / SlideDown / SlideToggle</div>
+            <div class="sliding">Using jquery</div>
+        </div>
+        <div class="bt-group">
+            <button class="bt1">SlideUp</button>
+            <button class="bt2">SlideDown</button>
+            <button class="bt3">SlideToggle</button>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    $(document).ready(function(){
+        $(".bt2").click(function(){
+            $(".sliding").slideDown(2000)
+        })
+    })
+
+    $(document).ready(function(){
+        $(".bt1").click(function(){
+            $(".sliding").slideUp(2000)
+        })
+    })
+
+    $(document).ready(function(){
+        $(".bt3").click(function(){
+            $(".sliding").slideToggle(2000)
+        })
+    })
+</script>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+
+    .box-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        margin-top: 50px;
+    }
+
+    .box1 {
+        height: 300px;
+        width: 300px;
+        background-color: aqua;
+    }
+
+    .box2 {
+        height: 300px;
+        width: 300px;
+        background-color: pink;
+    }
+
+    .box3 {
+        height: 300px;
+        width: 300px;
+        background-color: yellow;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 50px;
+    }
+
+    .bt1 {
+        height: 40px;
+        width: 130px;
+        font-size: 20px;
+        background-color: aquamarine;
+    }
+
+    .bt2 {
+        height: 40px;
+        width: 130px;
+        font-size: 20px;
+        background-color: aquamarine;
+    }
+
+    .bt3 {
+        height: 40px;
+        width: 130px;
+        font-size: 20px;
+        background-color: aquamarine;
+    }
+
+    .bt4 {
+        height: 40px;
+        width: 130px;
+        font-size: 20px;
+        background-color: aquamarine;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box-group">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+        </div>
+
+        <div class="button-group">
+            <button class="bt1">fadeIn</button>
+            <button class="bt2">fadeOut</button>
+            <button class="bt3">fadeToggle</button>
+            <button class="bt4">fadeTo</button>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+
+    $(document).ready(function () {
+        $(".bt2").click(function () {
+            $(".box1").fadeOut()
+            $(".box2").fadeOut("slow")
+            $(".box3").fadeOut(3000)
+        })
+    })
+
+    $(document).ready(function () {
+        $(".bt1").click(function () {
+            $(".box1").fadeIn()
+            $(".box2").fadeIn("slow")
+            $(".box3").fadeIn(3000)
+        })
+    })
+
+    $(document).ready(function () {
+        $(".bt3").click(function () {
+            $(".box1").fadeToggle()
+            $(".box2").fadeToggle("slow")
+            $(".box3").fadeToggle(3000)
+        })
+    })
+
+    $(document).ready(function () {
+        $(".bt4").click(function () {
+            $(".box1").fadeTo()
+            $(".box2").fadeTo("slow",0.6)
+            $(".box3").fadeTo(2000 , 0.1)
+        })
+    })
+
+
+</script>
+
+</html>
